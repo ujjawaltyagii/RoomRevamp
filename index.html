@@ -5,10 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RoomRevamp</title>
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <style>
         .imgclr{
-            filter: saturate(200%) hue-rotate(180deg);
+          filter: drop-shadow(0 0 5px white);
+        }
+        .btn{
+          background-color: #c2fbd7;
+          border-radius: 100px;
+          box-shadow: rgba(44, 187, 99, .2) 0 -8px 6px -6px inset, rgba(44, 187, 99, .15) 0 2px 4px, rgba(44, 187, 99, .15) 0 4px 8px, rgba(44, 187, 99, .15) 0 8px 16px;
+          color: green;
+          cursor: pointer;
+          display: inline-block;
+          font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+          font-size: 16px;
+          padding: 7px 20px;
+          text-align: center;
+          text-decoration: none;
+          transition: all 250ms;
+          user-select: none;
+          -webkit-user-select: none;
+          touch-action: manipulation;
+          border: 0;
+         }
+
+        .btn:hover {
+         box-shadow: rgba(44, 187, 99, .35) 0 -8px 6px -6px inset, rgba(44, 187, 99, .25) 0 2px 4px, rgba(44, 187, 99, .25) 0 4px 8px, rgba(44, 187, 99, .25) 0 8px 16px;
+         transform: scale(1.05) rotate(-1deg); 
         }
     </style>
 </head>
@@ -21,13 +45,13 @@
         <div class="bg-[url(./images/1.jpg)] bg-no-repeat bg-cover">
             <!-- nav bar -->
             <nav class="text-white container max-w-[1200px] mx-auto flex
-            justify-between h-[72px] items-center px-7 xl:px-0">
+            justify-between h-[72px] items-center px-7 xl:px-0 pt-5">
             <!-- logo -->
-            <div class="imgclr flex justify-center align-baseline ">
-                <img src="./images/logo.png" alt="" width="60" height="60">
+            <div class="flex justify-center align-baseline text-white">
+                <img src="./images/logo.png" alt="" width="60" height="60" class="imgclr">
                 <p class="mt-4 text-2xl">RoomRevamp</p>
             </div>
-            <div class="hidden xl:flex gap-5 font-[600] font-[16px]">
+            <div class="hidden xl:flex gap-5 font-[600] font-[16px] group">
                 <a href="#" class="capitalize hover:underline">Try RR+</a>
                 <a href="#" class="capitalize hover:underline">discover</a>
                 <a href="#" class="capitalize hover:underline">Policy</a>
@@ -36,14 +60,7 @@
                 <a href="#" class="capitalize hover:underline">Join Us</a>
               </div>
 
-              <!-- open ### -->
-           <div class="hidden xl:flex">
-            <a href="#">
-               <button class="bg-white px-4 self-center p-2 text-[#2c2f33] hover:text-[#5865f2] hover:shadow-white transition-all duration-150 rounded-full font-[500] text-[14px]">
-                   Open
-               </button>
-            </a>
-          </div>
+          
           <!-- Humburrgir option -->
           <div class="xl:hidden block">
             <i class="fa-solid fa-bars text-[23px]"></i>
@@ -59,16 +76,19 @@
                      & Furniture with Our Virtual Interior Designer.</h2>
 
                      <div class="hidden xl:flex flex-row items-center justify-center gap-10 font-[500] z-20">
-                        <a href="#" class="bg-white text-black p-3 px-7 rounded-full hover:text-[#404EED] hover:shadow-xl transition-all duration-200">
-                            <p>
-                                <i class="fa-solid fa-download mr-2"></i>
-                                Get Started
-                            </p>
-                        </a>
-                       <a href="#" class="bg-[#23272a] hover:bg-[#2f3438] hover:shadow-xl transition-all duration-200 text-white p-3 px-7 rounded-full">
-                        Log in 
-                       </a>
-                    </div>
+                      <a href="#" class="bg-white text-black p-3 px-7 rounded-full hover:text-[#404EED] hover:shadow-xl transition-all duration-200"
+                          style="box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);"> <!-- updated box-shadow values -->
+                          <p>
+                              <i class="fa-solid fa-download mr-2"></i>
+                              Get Started
+                          </p>
+                      </a>
+                      <a href="#" class="bg-[#353839] hover:bg-[#2f3438] hover:shadow-xl transition-all duration-200 text-white p-3 px-7 rounded-full"
+                          style="box-shadow: 0 0 5px rgba(255, 255, 255, 0.25);"> <!-- updated box-shadow values -->
+                          Log in
+                      </a>
+                  </div>
+                  
 
                     <div class="flex xl:hidden font-[500] z-20">
                         <a href="#" class="bg-white text-black p-3 px-7 rounded-full hover:text-[#404EED]">
@@ -111,7 +131,7 @@
          <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 lg:gap-8 mt-10 relative mb-10">
             <!-- box-1  -->
             <div class="w-full min-h-[15rem] cursor-pointer hover:scale-105 transition-all duration-200 hover:drop-shadow-[0_7px_7px_rgba(0,0,0,0.1)]">
-                <img src="./images/h2.jpg" alt="" width="100%"  height="100%" class="object-contain w-[100%] overflow-hidden">
+                <img src="./images/h2.jpg" alt="" width="100%" loading="lazy" height="100%" class="object-contain w-[100%] overflow-hidden">
                 <!-- box content -->
                 <div class="mt-5">
                   <div class="font-[500] text-lg">
@@ -124,7 +144,7 @@
             </div>
             <!-- box 2 -->
             <div class="w-full min-h-[15rem] cursor-pointer hover:scale-105 transition-all duration-200 hover:drop-shadow-[0_7px_7px_rgba(0,0,0,0.1)]">
-              <img src="./images/hnnn.jpg" alt="" width="100%"  height="100%" class="object-contain w-[100%] overflow-hidden">
+              <img src="./images/hnnn.jpg" alt="" width="100%" loading="lazy"  height="100%" class="object-contain w-[100%] overflow-hidden">
               <!-- box content -->
               <div class="mt-5">
                 <div class="font-[500] text-lg">
@@ -137,7 +157,7 @@
             </div>
             <!-- box 3 -->
             <div class="w-full min-h-[15rem] cursor-pointer hover:scale-105 transition-all duration-200 hover:drop-shadow-[0_7px_7px_rgba(0,0,0,0.1)]">
-              <img src="./images/hn1.jpg" alt="" width="100%"  height="100%" class="object-contain w-[100%] overflow-hidden">
+              <img src="./images/hn1.jpg" alt="" width="100%"  height="100%" loading="lazy" class="object-contain w-[100%] overflow-hidden">
               <!-- box content -->
               <div class="mt-5">
                  <div class="font-[500] text-lg">
@@ -150,7 +170,7 @@
             </div>
             <!-- box 4 -->
             <div class="w-full min-h-[15rem] cursor-pointer hover:scale-105 transition-all duration-200 hover:drop-shadow-[0_7px_7px_rgba(0,0,0,0.1)]">
-              <img src="./images/h4.jpg" alt="" width="100%"  height="100%" class="object-contain w-[100%] overflow-hidden">
+              <img src="./images/h4.jpg" alt="" width="100%"  height="100%" loading="lazy" class="object-contain w-[100%] overflow-hidden">
               <!-- box content -->
               <div class="mt-5">
                 <div class="font-[500] text-lg">
@@ -163,7 +183,7 @@
             </div>
             <!-- box 5 -->
             <div class="w-full min-h-[15rem] cursor-pointer hover:scale-105 transition-all duration-200 hover:drop-shadow-[0_7px_7px_rgba(0,0,0,0.1)]">
-              <img src="./images/hn2.jpg" alt="" width="100%"  height="100%" class="object-contain w-[100%] overflow-hidden">
+              <img src="./images/hn2.jpg" alt="" width="100%"  height="100%" loading="lazy" class="object-contain w-[100%] overflow-hidden">
               <!-- box content -->
               <div class="mt-5">
                 <div class="font-[500] text-lg">
@@ -176,7 +196,7 @@
             </div>
             <!-- box 6 -->
             <div class="w-full min-h-[15rem] cursor-pointer hover:scale-105 transition-all duration-200 hover:drop-shadow-[0_7px_7px_rgba(0,0,0,0.1)]">
-              <img src="./images/h6.jpg" alt="" width="100%"  height="100%" class="object-contain w-[100%] overflow-hidden">
+              <img src="./images/h6.jpg" alt="" width="100%"  height="100%" loading="lazy" class="object-contain w-[100%] overflow-hidden">
               <!-- box content -->
               <div class="mt-5">
                 <div class="font-[500] text-lg">
@@ -189,7 +209,7 @@
             </div>
             <!-- box 7 -->
             <div class="w-full min-h-[15rem] cursor-pointer hover:scale-105 transition-all duration-200 hover:drop-shadow-[0_7px_7px_rgba(0,0,0,0.1)]">
-              <img src="./images/hn3.jpg" alt="" width="100%"  height="100%" class="object-contain w-[100%] overflow-hidden">
+              <img src="./images/hn3.jpg" alt="" width="100%"  height="100%" loading="lazy" class="object-contain w-[100%] overflow-hidden">
                 <!-- box content -->
                 <div class="mt-5">
                   <div class="font-[500] text-lg">
@@ -202,7 +222,7 @@
             </div>
             <!-- box 8 -->
             <div class="w-full min-h-[15rem] cursor-pointer hover:scale-105 transition-all duration-200 hover:drop-shadow-[0_7px_7px_rgba(0,0,0,0.1)]">
-              <img src="./images/hnn2.jpg" alt="" width="100%"  height="100%" class="object-contain w-[100%] overflow-hidden">
+              <img src="./images/hnn2.jpg" alt="" width="100%"  height="100%" loading="lazy" class="object-contain w-[100%] overflow-hidden">
                 <!-- box content -->
                 <div class="mt-5">
                   <div class="font-[500] text-lg">
@@ -215,7 +235,7 @@
             </div>
             <!-- box 9 -->
             <div class="w-full min-h-[15rem] cursor-pointer hover:scale-105 transition-all duration-200 hover:drop-shadow-[0_7px_7px_rgba(0,0,0,0.1)]">
-              <img src="./images/test.jpg" alt="" width="100%"  height="100%" class="object-contain w-[100%] overflow-hidden">
+              <img src="./images/test.jpg" alt="" width="100%"  height="100%" loading="lazy" class="object-contain w-[100%] overflow-hidden">
                 <!-- box content -->
                 <div class="mt-5">
                   <div class="font-[500] text-lg">
@@ -230,11 +250,11 @@
         </div>
         <!-- customer care -->
         <div class="w-full bg-[#c56653]">
-            <div class="max-w-[1310px] mx-auto text-white pt-7 pb-9 flex gap-40">
+            <div class="max-w-[1310px] mx-auto text-white mt-16 pt-7 pb-9 flex gap-40">
               <!-- first -->
               <div>
                 <div class="flex space-x-3">
-                  <img src="./images/thumb-up.png" alt="" class="w-9 h-9">
+                  <img src="./images/thumb-up.png" alt="" class="w-9 h-9"  loading="lazy">
                   <span class="text-2xl font-[500]">Hand Picked Guides</span>
                 </div>
                   <h3 class="max-w-[260px] mt-3 ml-1">Curated by expert designers, our handpicked guides offer you the best in interior design.</h3>
@@ -242,7 +262,7 @@
               <!-- 2nd -->
               <div>
                 <div class="flex space-x-3">
-                  <img src="./images/support.png" alt="" class="w-9 h-9">
+                  <img src="./images/support.png" alt="" class="w-9 h-9" loading="lazy">
                   <span class="text-2xl font-[500]">24/7 Support</span>
                 </div>
                   <h3 class="max-w-[260px] mt-3">Get expert's advice anytime, anywhere with our round-the-clock support from professional designers.</h3>
@@ -250,7 +270,7 @@
               <!-- 3rd -->
               <div>
                 <div class="flex space-x-3">
-                  <img src="./images/gp.png" alt="" class="w-9 h-9">
+                  <img src="./images/gp.png" alt="" class="w-9 h-9" loading="lazy">
                   <span class="text-2xl font-[500]">1:1 Session</span>
                 </div>
                   <h3 class="max-w-[269px] mt-3">Transform your space with confidence with our personalized 1-on-1 design sessions.</h3>
@@ -259,12 +279,12 @@
         </div>
 
         <!-- 3rd section -->
-        <div class="">
+        
           <div class="flex container max-w-[1200px] mx-auto items-center py-14 md:py-36 
           flex-col md:flex-row px-7 md:px-0">
             <!-- left part -->
             <div class="md:w-[50%]">
-               <img src="./images/ab1.jpg" alt="" class="w-full object-cover -z-1">
+               <img src="./images/ab1.jpg" alt="" loading="lazy" class="w-full object-cover -z-1">
             </div>
       
             <!-- right part -->
@@ -277,16 +297,17 @@
                 <p class="font-['ggSans'] text-[16px] sm:text-[20px] font-[400] mt-[24px]">
                   Design you dream space just by uploading a photo of your room, customize it with different furniture and decor items, and see your vision come to life in just a few clicks.
                 </p>
+                <button class="btn mt-4" role="button">See how</button>
               </div>
             </div>
           </div>
 
-           <!-- 2nd part -->
+           <!-- 4th section -->
     <div class="bg-[#f6f6f6]">
       <div class="flex container max-w-[1200px] mx-auto items-center py-14 md:py-36 
       flex-col md:flex-row px-7 md:px-0">
        <div class="block md:hidden md:w-[50%]">
-         <img src="./images/ab2.jpg" alt="">
+         <img src="./images/ab2.jpg" alt="" loading="lazy">
        </div>
  
        <div class="md:w-[50%]">
@@ -296,19 +317,225 @@
             font-['ggSans'] leading-[24px] md:leading-[57.6px] mt-5 md:mt-0">
               Place where Outdesigning every design is easy.
             </h1>
-            <h2 class="font-[600] text-md mt-2">Power Report</h2>
-            <p class="font-['ggSans'] text-[16px] sm:text-[20px] font-[400] mt-[24px]">
-              Grab a seat in a voice channel when you&apos;re free. Friends in your server can see you&apos;re around and instantly pop in to talk without having to call.
+            <h2 class="font-[650] text-md mt-2">Power Report</h2>
+            <p class="font-['ggSans'] text-[16px] sm:text-[20px] font-[400] mt-[5px]">
+              Did you know that interior design is a $121 billion industry, with over 75% of consumers planning to redecorate or renovate their homes within the next 2 years?
             </p>
+            <div class="flex align-baseline justify-start items-center mt-4">
+              <button
+                       class="bg-[#2b84ea] w-full md:w-fit text-white py-[9px] px-4 rounded-md
+                       font-mullish font-bold hover:bg-[#0b72e7] transition-all duration-200 flex items-center justify-center gap-3"
+                       >Read More
+                       <svg
+                            viewBox="0 0 24 24"
+                            focusable="false"
+                            class="w-[20px] h-[20px]">
+                              <path
+                                fill="currentColor"
+                                  d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z">
+                              </path>
+                        </svg>
+                </button>
+            </div>
           </div>
        </div>
        <div class="md:w-[50%] md:block hidden">
-         <img src="./images/check.svg" alt="">
+         <img src="./images/ab2.jpg" alt="">
        </div>
       </div>
      </div>
+
+     <!-- 5th section -->
+     <div class="bg-[#2b5139] w-full">
+        <div class="max-w-[1200px] mx-auto flex pt-28 text-white gap-20 pb-28">
+          <div class="block md:hidden md:w-[50%]">
+            <img src="./images/ph.png" alt="" loading="lazy">
+          </div>
+          <div class="md:w-[50%] md:block hidden">
+            <img src="./images/ph.png" alt="" loading="lazy">
+          </div>
+          <div class="mt-3">
+            <h2 class="font-[500] text-sm tracking-wide">GET STARTED</h2>
+            <h1 class="font-[600] text-[50px]">Bring you idea to reality today !</h1>
+            
+            <div class="space-y-12">
+              <div class="flex gap-10 items-baseline mt-4">
+                <div class="w-[60px] h-[55px] rounded-md bg-[#ebb75d] text-black text-2xl font-[500] flex justify-center items-center">1</div>
+              
+              <h3 class="font-[500] text-2xl">Create your free account</h3>
+            </div>
+
+            <div class="flex gap-10 items-baseline mt-4">
+              <div class="w-[60px] h-[55px] rounded-md bg-[#ebb75d] text-black text-2xl font-[500] flex justify-center items-center">2</div>
+            
+            <h3 class="font-[500] text-2xl">Upload photo of your room</h3>
+          </div>
+
+          <div class="flex gap-10 items-baseline mt-4">
+            <div class="w-[60px] h-[55px] rounded-md bg-[#ebb75d] text-black text-2xl font-[500] flex justify-center items-center">3</div>
+          
+          <h3 class="font-[500] text-2xl">Add designs</h3>
         </div>
+            </div>
+             
+            
+          </div>
+        </div>
+     </div>   
+
+     <!-- last section -->
+     <div class="bg-[#f5e9ce] w-full">
+        <div class="max-w-[1200px] mx-auto flex flex-col pt-24 pb-24">
+           <div class="flex flex-col justify-center items-center">
+            <h3 class="font-[500] text-sm text-black tracking-widest">HERE, WE GO !</h3>
+            <h1 class="font-[600] text-[50px]">No matter what you design</h1><h1 class="font-[600] text-[50px] -mt-5">we are here to help you</h1>
+           </div>
+           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 lg:gap-8 mt-12">
+              <!-- 1 box -->
+              <div class="w-full min-h-[15rem] cursor-pointer relative">
+                <img src="./images/off.jpg" alt="" width="100%" height="100%" loading="lazy" class="object-contain w-[100%] rounded-[35px] overflow-hidden z-0">
+                <div class="absolute top-0 bottom-0 left-0 right-0 flex justify-center items-center">
+                  <div class="bg-white px-4 py-2 rounded-md hover:scale-105 hover:drop-shadow-md transition-all duration-200">
+                    <h3 class="font-[500] tracking-wide">Business Interiors</h3>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- 2 box -->
+              <div class="w-full min-h-[15rem] cursor-pointer relative">
+                <img src="./images/ah8.jpg" alt="" width="100%" height="100%" loading="lazy" class="object-contain w-[100%] rounded-[35px] overflow-hidden z-0">
+                <div class="absolute top-0 bottom-0 left-0 right-0 flex justify-center items-center">
+                  <div class="bg-white px-4 py-2 rounded-md hover:scale-105 hover:drop-shadow-md transition-all duration-200">
+                    <h3 class="font-[500] tracking-wide">Aesthetics</h3>
+                  </div>
+                </div>
+              </div>
+              <!-- 3rd box -->
+              <div class="w-full min-h-[15rem] cursor-pointer relative">
+                <img src="./images/cas.jpg" alt="" width="100%" height="100%" loading="lazy" class="object-contain w-[100%] rounded-[35px] overflow-hidden z-0">
+                <div class="absolute top-0 bottom-0 left-0 right-0 flex justify-center items-center">
+                  <div class="bg-white px-4 py-2 rounded-md hover:scale-105 hover:drop-shadow-md transition-all duration-200">
+                    <h3 class="font-[500] tracking-wide">Casuals</h3>
+                  </div>
+                </div>
+              </div>
+           </div>
+        </div>
+     </div>
+
+     <!-- footer -->
+     <div class="bg-green-200">
+      <div class="container text-green-800 max-w-[1200px] mx-auto pt-24 flex flex-col gap-10 pb-10">
+        <!-- first part -->
+        <div class="flex xl:gap-[100px] gap-[40px] flex-col md:flex-row px-5">
+          <!-- left section -->
+          <div class="flex flex-col gap-[10px] w-[100%] md:w-[50%] xl:w-[20%]">
+            <h1 class="font-[800] font-['Whitney'] text-[32px] leading-[30.4px] tracking-widest">
+               DESIGN A <br class="hidden md:block"> PLACE
+            </h1>
+            <div class="text-black text-[23px] flex gap-7">
+              <a href="#" class="hover:scale-110 hover:text-blue-500 transition-all duration-200">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+              <a href="#" class="hover:scale-110 hover:text-[#e45c5c] transition-all duration-200">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="#" class="hover:scale-110 hover:text-blue-500 transition-all duration-200">
+                <i class="fa-brands fa-square-facebook"></i>
+              </a>
+              <a href="#" class="hover:scale-110 hover:text-[#e45c5c] transition-all duration-200">
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+  
+           <!-- right section -->
+            <div class="md:w-[75%] flex justify-around flex-wrap">
+              <div class="w-[50%] xl:w-fit">
+                <h2 class="text-[16px] font-['ggSans'] xl:py-[10px] py-[15px] font-[600]">
+                    Product
+                </h2>
+                <ul class="text-gray-800 flex flex-col gap-[10px] leading-[24px] font-[400] font-['ggSans']">
+                  <li class="hover:underline"><a href="#">Download</a></li>
+                  <li class="hover:underline"><a href="#">RR+</a></li>
+                  <li class="hover:underline"><a href="#">Status</a></li>
+                </ul>
+              </div>
+  
+              <div class="w-[50%] xl:w-fit">
+                <h2 class="text-[16px] font-['ggSans'] xl:py-[10px] py-[15px] font-[600]">
+                  Company
+                </h2>
+                <ul class="text-gray-800 flex flex-col gap-[10px] leading-[24px] font-[400] font-['ggSans']">
+                  <li class="hover:underline"><a href="#">About</a></li>
+                  <li class="hover:underline"><a href="#">Jobs</a></li>
+                  <li class="hover:underline"><a href="#">Branding</a></li>
+                  <li class="hover:underline"><a href="#">Newsroom</a></li>
+                </ul>
+              </div>
+  
+              <div class="w-[50%] xl:w-fit">
+                <h2 class="text-[16px] font-['ggSans'] xl:py-[10px] py-[15px] font-[600]">
+                  Resources
+                </h2>
+                <ul class="text-gray-800 flex flex-col gap-[10px] leading-[24px] font-[400] font-['ggSans']">
+                  <li class="hover:underline"><a href="#">Colleges</a></li>
+                  <li class="hover:underline"><a href="#">Support</a></li>
+                  <li class="hover:underline"><a href="#">Safety</a></li>
+                  <li class="hover:underline"><a href="#">Blog</a></li>
+                  <li class="hover:underline"><a href="#">Feedback</a></li>
+                  <li class="hover:underline"><a href="#">Developers</a></li>
+                  <li class="hover:underline"><a href="#">StreamKit</a></li>
+                  <li class="hover:underline"><a href="#">Creators</a></li>
+                </ul>
+              </div>
+    
+              <div class="w-[50%] xl:w-fit">
+                <h2 class="text-[16px] font-['ggSans'] xl:py-[10px] py-[15px] font-[600]">
+                  Policies
+                </h2>
+                <ul class="text-gray-800 flex flex-col gap-[10px] leading-[24px] font-[400] font-['ggSans']">
+                  <li class="hover:underline"><a href="#">Terms</a></li>
+                  <li class="hover:underline"><a href="#">Privacy</a></li>
+                  <li class="hover:underline"><a href="#">Cookie Settings</a></li>
+                  <li class="hover:underline"><a href="#">Guidelines</a></li>
+                  <li class="hover:underline"><a href="#">Acknowledgements</a></li>
+                  <li class="hover:underline"><a href="#">Licenses</a></li>
+                  <li class="hover:underline"><a href="#">Moderation</a></li>
+                </ul>
+              </div>
+  
+            </div>
+        </div>
+  
+        <!-- second part -->
+        <div class="flex border-t-2 border-[#000] items-center justify-between pt-7 mx-5">
+          <div class="text-black flex">
+             <img src="./images/logo.png" alt="logo" width="60" height="60" loading="lazy">
+             <h3 class="tracking-wider font-[600] text-2xl mt-3">RoomRevamp</h3>
+          </div>
+  
+          <div class="xl:block hidden">
+            <button class="text-white bg-green-500 hover:bg-green-600 transition-all duration-200  px-[16px] py-[7px] rounded-full leading-[24px] text-[14px] font-[500]">
+              Sign up
+            </button>
+          </div>
+  
+          <div class="block xl:hidden">
+            <button
+              class="text-white bg-green-500 hover:bg-green-600 px-[13px] py-[5px] rounded-full leading-[24px] text-[14px] font-[500]">
+              Sign up
+            </button>
+          </div>
+  
+        </div>
+      </div>
+     </div>
+
+
     </div>
+
+    <script src="https://kit.fontawesome.com/58a810656e.js" crossorigin="anonoymous"></script>
 
 </body>
 </html>
